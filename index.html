@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A friendly, visual guide to Git and GitHub fundamentals." />
+  <title>Git, demystified.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Git, demystified home">
+      <span class="brand-mark" aria-hidden="true">{ }</span>
+      <span>Git, demystified<span class="brand-dot">.</span></span>
+    </a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="#mental-model">The mental model</a>
+      <a href="#workflow">The workflow</a>
+      <a href="#cheatsheet">Cheatsheet</a>
+    </nav>
+    <a class="header-cta" href="#quiz">Test yourself <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main id="top">
+    <section class="hero section-shell">
+      <div class="hero-copy reveal">
+        <p class="eyebrow"><span class="eyebrow-line"></span> A field guide for first commits</p>
+        <h1>Git is the<br /><em>memory</em> of<br />your code.</h1>
+        <p class="hero-intro">Git keeps a time machine on your laptop. GitHub gives that time machine a home your team can visit.</p>
+        <a class="button button-dark" href="#mental-model">Start with the big idea <span aria-hidden="true">↓</span></a>
+      </div>
+      <div class="hero-art reveal" aria-label="Illustration of a Git timeline" role="img">
+        <div class="art-note note-top">every change<br />has a story</div>
+        <div class="timeline-art">
+          <div class="timeline-line"></div>
+          <div class="timeline-node node-one"><span>01</span></div>
+          <div class="timeline-node node-two"><span>02</span></div>
+          <div class="timeline-node node-three"><span>03</span></div>
+          <div class="timeline-node node-four"><span>04</span></div>
+          <div class="timeline-label label-one">initial commit</div>
+          <div class="timeline-label label-two">new idea</div>
+          <div class="timeline-label label-three">bug, fixed</div>
+          <div class="timeline-label label-four">ship it</div>
+        </div>
+        <div class="art-note note-bottom">make changes<br />without fear</div>
+        <span class="art-scribble" aria-hidden="true">↗</span>
+      </div>
+      <div class="scroll-cue"><span class="scroll-line"></span> Scroll to explore</div>
+    </section>
+
+    <section class="manifesto section-shell" id="mental-model">
+      <div class="section-kicker">01 / The mental model</div>
+      <div class="manifesto-grid">
+        <h2>Two tools.<br /><span>One clear story.</span></h2>
+        <div class="manifesto-copy">
+          <p>Git and GitHub are related, but they are not the same thing. One lives beside your code. The other lives on the internet.</p>
+          <p class="small-copy">Think of it like this: <strong>Git is your notebook.</strong> GitHub is the library where you can share that notebook with other people.</p>
+        </div>
+      </div>
+      <div class="tool-compare">
+        <article class="tool-card git-card">
+          <div class="tool-topline"><span class="tool-icon">G</span><span class="tool-type">local tool</span></div>
+          <h3>Git</h3>
+          <p>Tracks changes to files on your computer. It works offline and remembers every version you choose to save.</p>
+          <div class="tool-footer"><code>git commit</code><span>save a moment</span></div>
+        </article>
+        <div class="compare-connector" aria-hidden="true"><span>+</span></div>
+        <article class="tool-card github-card">
+          <div class="tool-topline"><span class="tool-icon github-icon">◖</span><span class="tool-type">online platform</span></div>
+          <h3>GitHub</h3>
+          <p>Stores Git repositories online so people can collaborate, review work, and build together.</p>
+          <div class="tool-footer"><code>git push</code><span>share a moment</span></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="workflow section-shell" id="workflow">
+      <div class="section-kicker light-kicker">02 / The workflow</div>
+      <div class="workflow-heading">
+        <h2>From thought<br /><em>to shipped.</em></h2>
+        <p>A commit is just a checkpoint. Stack a few together and you have a story you can always return to.</p>
+      </div>
+      <div class="flow-path" aria-label="Git workflow: edit, stage, commit, push">
+        <div class="flow-step"><span class="step-number">01</span><div class="step-icon edit-icon">✎</div><h3>Edit</h3><p>Change your files.</p><code>your code</code></div>
+        <div class="flow-arrow" aria-hidden="true">→</div>
+        <div class="flow-step"><span class="step-number">02</span><div class="step-icon stage-icon">＋</div><h3>Stage</h3><p>Choose what counts.</p><code>git add .</code></div>
+        <div class="flow-arrow" aria-hidden="true">→</div>
+        <div class="flow-step"><span class="step-number">03</span><div class="step-icon commit-icon">●</div><h3>Commit</h3><p>Save a checkpoint.</p><code>git commit</code></div>
+        <div class="flow-arrow" aria-hidden="true">→</div>
+        <div class="flow-step"><span class="step-number">04</span><div class="step-icon push-icon">↑</div><h3>Push</h3><p>Share it online.</p><code>git push</code></div>
+      </div>
+      <div class="workflow-note"><span class="note-pin">✳</span><span>Small commits make big changes easier to understand.</span></div>
+    </section>
+
+    <section class="cheatsheet section-shell" id="cheatsheet">
+      <div class="section-kicker">03 / The cheatsheet</div>
+      <div class="cheatsheet-heading"><h2>Your first<br /><span>five commands.</span></h2><p>Enough to start making useful history today.</p></div>
+      <div class="command-list">
+        <button class="command-row" type="button" data-command="git init" data-detail="Start tracking the current folder with Git."><span class="command-index">01</span><code>git init</code><span class="command-description">Start a repository</span><span class="copy-hint">Copy <span aria-hidden="true">↗</span></span></button>
+        <button class="command-row" type="button" data-command="git status" data-detail="See which files are changed, staged, or untracked."><span class="command-index">02</span><code>git status</code><span class="command-description">Read the room</span><span class="copy-hint">Copy <span aria-hidden="true">↗</span></span></button>
+        <button class="command-row" type="button" data-command="git add ." data-detail="Stage all current changes for the next commit."><span class="command-index">03</span><code>git add .</code><span class="command-description">Choose your changes</span><span class="copy-hint">Copy <span aria-hidden="true">↗</span></span></button>
+        <button class="command-row" type="button" data-command="git commit -m &quot;Your message&quot;" data-detail="Create a permanent checkpoint with a message that explains the change."><span class="command-index">04</span><code>git commit -m &quot;Your message&quot;</code><span class="command-description">Name the moment</span><span class="copy-hint">Copy <span aria-hidden="true">↗</span></span></button>
+        <button class="command-row" type="button" data-command="git push origin main" data-detail="Send your local commits to the shared GitHub repository."><span class="command-index">05</span><code>git push origin main</code><span class="command-description">Send it out</span><span class="copy-hint">Copy <span aria-hidden="true">↗</span></span></button>
+      </div>
+      <p class="command-feedback" aria-live="polite">Click any command to copy it.</p>
+    </section>
+
+    <section class="quiz section-shell" id="quiz">
+      <div class="quiz-card">
+        <div class="quiz-intro"><div class="section-kicker light-kicker">04 / Quick check</div><h2>Who does<br /><em>what?</em></h2><p>One last distinction before you go make history.</p></div>
+        <div class="quiz-question"><span class="question-count">01 <span>/ 01</span></span><p>Which tool lets you save versions of your project <strong>offline</strong>?</p><div class="quiz-options"><button class="quiz-option" type="button" data-answer="correct"><span>A</span> Git</button><button class="quiz-option" type="button" data-answer="wrong"><span>B</span> GitHub</button></div><p class="quiz-result" aria-live="polite"></p></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer section-shell"><div class="footer-brand"><span class="brand-mark" aria-hidden="true">{ }</span><span>Made for your first <strong>git push</strong>.</span></div><p>Keep experimenting. The best way to learn Git is to use it.</p><a href="#top" class="back-top">Back to top ↑</a></footer>
+</body>
+</html>
